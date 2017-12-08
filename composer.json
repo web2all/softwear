@@ -1,0 +1,31 @@
+{
+    "name": "web2all/softwear",
+    "description": "Sync stock from Softwear to Magento",
+    "license": "MIT",
+    "keywords": ["magento","softwear","products","sync"],
+    "authors": [
+        {
+            "name": "Merijn van den Kroonenberg",
+            "homepage": "https://github.com/merijnvdk",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "~5.6.0",
+        "psr/log": "*",
+        "magento/framework": "*",
+        "magento/module-catalog": "*",
+        "magento/module-catalog-inventory": "*",
+        "magento/module-eav": "*"
+    },
+    "type": "magento2-module",
+    "version": "1.0.2",
+    "autoload": {
+        "files": [
+            "app/code/Web2All/Softwear/registration.php"
+        ],
+        "psr-4": {
+            "Web2All\\Softwear\\": "app/code/Web2All/Softwear/"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Crontabs:
+ * softwear_stock_updater: run every half hour
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
+    <group id="softwear_sync">
+        <job name="softwear_stock_updater" instance="Web2All\Softwear\Cron\StockUpdater" method="execute">
+            <schedule>*/30 * * * *</schedule>
+        </job>
+    </group>
+</config>

@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:Config/etc/system_file.xsd">
+    <system>
+        <tab id="web2all" translate="label" sortOrder="10">
+            <label>Web2All Extensions</label>
+        </tab>
+        <section id="web2all_softwear" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Softwear Sync</label>
+            <tab>web2all</tab>
+            <resource>Web2All_Softwear::web2all_softwear</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General</label>
+                <field id="enable_sync" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Sync Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>You can manually enable/disable the Softwear stock sync here</comment>
+                </field>
+                <!-- disabled as we don't need it for now
+                <field id="softwear_data_url" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Softwear data url</label>
+                </field>
+                -->
+                <field id="softwear_swapi_url" translate="label" type="text" sortOrder="21" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>SWAPI url</label>
+                    <validate>required-entry</validate>
+                    <comment>The base url (domain) of where the Softwear API is located. Either testapi.softwear.nl or webshop.softwear.nl</comment>
+                </field>
+                <field id="softwear_shopkey" translate="label" type="text" sortOrder="22" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Shop key</label>
+                    <validate>required-entry</validate>
+                    <comment>Your shop key is in format XXXX-XXXX-XXXX-XXXX-XXXX-XXXX-XXXX-XXXX</comment>
+                </field>
+                <field id="softwear_product_attribute_sku" translate="label" type="text" sortOrder="23" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Softwear SKU field</label>
+                    <validate>required-entry</validate>
+                    <comment>The magento custom attribute name which contains the Softwear SKU</comment>
+                </field>
+                <field id="softwear_product_attribute_key" translate="label" type="text" sortOrder="24" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Softwear Key field</label>
+                    <validate>required-entry</validate>
+                    <comment>The magento custom attribute name which contains the Softwear Key (simple product code)</comment>
+                </field>
+            </group>
+            <group id="loggingerrors" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Logging and Errors</label>
+                <field id="loglevel" translate="label" type="text" sortOrder="41" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Loglevel</label>
+                    <validate>required-entry</validate>
+                    <comment>Debug logging level [0-3] where 0 is no logging</comment>
+                </field>
+                <field id="recover_stillrunning" translate="label" type="select" sortOrder="42" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Recover last crash</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable if Softwear Sync crashed (only use if advised by Web2All)</comment>
+                </field>
+                <field id="dryrun" translate="label" type="select" sortOrder="43" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Dryrun</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>If Enabled then no stock levels will be updated in Magento (for debugging only)</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

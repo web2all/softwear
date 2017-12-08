@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Web2All B.V.. All rights reserved.
+ * See LICENCE.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="admin">
+        <route id="web2all_softwear" frontName="web2all_softwear">
+            <module name="Web2All_Softwear" />
+        </route>
+    </router>
+</config>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <web2all_softwear>
+            <general>
+                <enable_sync>0</enable_sync>
+            </general>
+            <loggingerrors>
+                <loglevel>1</loglevel>
+                <recover_stillrunning>0</recover_stillrunning>
+                <dryrun>0</dryrun>
+            </loggingerrors>
+        </web2all_softwear>
+    </default>
+</config>

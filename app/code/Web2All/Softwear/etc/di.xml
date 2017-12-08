@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<config>
+    <preference for="Web2All\Softwear\Api\SyncLogRepositoryInterface" type="Web2All\Softwear\Model\SyncLogRepository" />
+    <preference for="Web2All\Softwear\Api\SyncStateRepositoryInterface" type="Web2All\Softwear\Model\SyncStateRepository" />
+</config>
